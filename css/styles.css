@@ -13,7 +13,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Ubuntu', sans-serif;;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -52,6 +52,31 @@ html {
 }
 
 
+.c6,
+.c7,
+.c8,
+.c9,
+.c10 {
+    width:100%;
+    min-width: 150px;
+    height: 150px;
+}
+.c6 {
+    background-color:blueviolet;
+}
+.c7 {
+    background-color:rgb(217, 226, 43);
+}
+.c8 {
+    background-color:rgb(43, 131, 226);
+}
+.c9 {
+    background-color:rgb(43, 226, 83);
+}
+.c10 {
+    background-color:rgb(226, 134, 43);
+}
+
 /* @media (min-width: 600px) {
     .c2,
     .c3,
@@ -81,7 +106,9 @@ html {
     }
 } */
 
-
+img {
+    width: 100%;
+}
 body {
     font-size: 1-6rem;
 }
@@ -105,7 +132,7 @@ main {
 
 h1 {
     font-family: serif;
-    font-size: 4rem;
+    font-size: 3rem;
     color: purple;
     margin-bottom: 10px;
 }
@@ -113,7 +140,7 @@ h1 {
 p {
     color: white;
     /* font-size: 16px; */
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 h2 + p {
