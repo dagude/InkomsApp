@@ -8,13 +8,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- logo en png 8 -->
         <title>Inkoms</title>
-        <link rel="stylesheet" href="./css/styles.css">
+        
+        <link
+            rel="stylesheet"
+            href="./css/styles.css"
+        > <!-- Estilos enfocados en mobile -->
+        <link 
+            rel="stylesheet"
+            href="./css/tablet.css"
+            media="screen and (min-width:600px)"
+        > <!-- Estilos enfocados en tablet -->
+        <link
+            rel="stylesheet"
+            href="./css/desktop.css"
+            media="screen and (min-width:800px)"    
+        > <!-- Estilos enfocados en desktop -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     </head>
    
     <body>
-        <header>
+        <header class="page-header">
+            <h1 id="page-title" class="title">Inkoms</h1>
+            <div>
+                <a href="www.inkoms.com" class="site-header__logo">logo</a>
+            </div>
             <nav>
-                <ul class="main-nav">
+                <ul class="main-nav" class="nav">
                     <li class="main-nav__item"><a href="">Home</a></li>
                     <li class="main-nav__item"><a href="">Quiénos somos</a></li>
                     <li class="main-nav__item"><a href="">Mercado</a></li>
@@ -23,7 +45,37 @@
             </nav>
         </header>
 
-        <main>
+        <main class="container">
+
+
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+
+            <h1>Soy el título principal</h1>
+            
+            <section class="main-section">
+                <p>Estamos convencidos que todas las personas merecen acceder a las mejores posibilidades de inversión</p>
+            </section>
+
+            <div class="box-container">
+                <div class="box" id="one">box 1</div>
+                <div class="box" id="two">box 2</div>
+                <div class="box" id="three">box 3</div>
+                <div class="box" id="four">box 4</div>
+            </div>
+
+
+            
+            <section>
+                <h1>Soy el título</h1>
+                <div class="text-container">
+                    <p>soy el párrafo </p>
+                </div>
+            </section>
+
             <p>Soy un texto</p>
             <form action="">
                 <label for="hora">
@@ -60,7 +112,7 @@
             </section>
             <section>
                 <article>
-
+                    <p>soy un texto</p>
                 </article>
             </section>
             <section>
@@ -93,25 +145,30 @@
 
             <ol></ol>
         </main>
-        <footer>
-            <p>Contacto</p>
-            <p>contacto@inkoms.com</p>            
-            
-            <p>Síguenos</p>
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Linkedin</p>
+        <footer class="site-footer">
+            <div>
+                <p>Soy un Párrafo</p>
+                <h1>Soy un título</h1>
+                <h2>Soy otro titulo</h2>
+                <h3>Soy otro título más</h3>
+                <a href="https://www.inkoms.com/">Visita Inkoms</a>
+            </div>
 
+            <div>
+                <p>Conócenos</p>
+            </div>
+
+            <div>
+                <p>Contacto</p>
+                <p>contacto@inkoms.com</p>                
+            </div>
+
+            <div>
+                <p>Síguenos</p>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Linkedin</p>
+            </div>
         </footer>
-    <div>
-
-    </div>
-    <p>Soy un Párrafo</p>
-    <h1>Soy un título</h1>
-    <h2>Soy otro titulo</h2>
-    <h3>Soy otro título más</h3>
-    <a href="https://www.inkoms.com/">Visita Inkoms</a>
-    
-
     </body>
 </html>
