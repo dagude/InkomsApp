@@ -25,3 +25,7 @@
     width: 100%;
     order: 5;
 }
+
+.logo {
+    display: block;
+}
