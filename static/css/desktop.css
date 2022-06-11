@@ -38,3 +38,7 @@
 .logo {
     display: block;
 }
+
+header .title {
+    display: none;
+}

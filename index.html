@@ -6,21 +6,20 @@
         <meta name="description" content="Plataforma abierta de inversiones">
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- logo en png 8 -->
         <title>Inkoms</title>
         
         <link
             rel="stylesheet"
-            href="./css/styles.css"
+            href="static/css/styles.css"
         > <!-- Estilos enfocados en mobile -->
         <link 
             rel="stylesheet"
-            href="./css/tablet.css"
+            href="static/css/tablet.css"
             media="screen and (min-width:600px)"
         > <!-- Estilos enfocados en tablet -->
         <link
             rel="stylesheet"
-            href="./css/desktop.css"
+            href="static/css/desktop.css"
             media="screen and (min-width:800px)"    
         > <!-- Estilos enfocados en desktop -->
 
@@ -30,52 +29,60 @@
     </head>
    
     <body>
-        <header class="page-header">
-            <h1 id="page-title" class="title">Inkoms</h1>
-            <div>
-                <a href="www.inkoms.com" class="site-header__logo">logo</a>
-            </div>
-            <nav>
-                <ul class="main-nav" class="nav">
-                    <li class="main-nav__item">
-                        <a href="">Home</a>
+        <header class="header">
+            <picture class="header-logo">
+                <img src="static/images/logo_Inkoms%20-%20blanco.png" alt="Inkoms" title="Logo de Inkoms"
+                href="https://www.inkoms.com">
+            </picture>
+
+            <!-- <h1 id="title" class="title">
+                Inkoms
+            </h1> -->
+
+            <nav class="header-nav">
+                <ul class="header-nav" class="nav">
+                    <li class="header-nav__item">
+                        <a href="">Inicio</a>
                     </li>
-                    <li class="main-nav__item">
+                    <li class="header-nav__item">
                         <a href="">Quiénos somos</a>
                     </li>
-                    <li class="main-nav__item">
-                        <a href="">Mercado</a>
+                    <!-- <li class="header-nav__item">
+                        <a href="">Productos</a>
+                    </li> -->
+                    <li class="header-nav__item">
+                        <a href="">Industria</a>
                     </li>
-                    <li class="main-nav__item">
+                    <li class="header-nav__item">
                         <a href="">Contáctanos</a>
                     </li>
-                    <li class="main-nav__item">
-                        <a href="">Buscador</a>
+                    <li class="header-nav__item">
+                        <a href="">Inicia sesión</a>
                     </li>
-
+                    <li class="header-nav__item">
+                        <a href="">Únete</a>
+                    </li>
+                    <!-- <li class="header-nav__item">
+                        <a href="">Buscador</a>
+                    </li> -->
                 </ul>
             </nav>
         </header>
 
-        <main class="container">
-            
-            <picture class="picture">
+        <div class="c1"></div>
+
+        <main class="container">        
+            <!-- <picture class="picture">
                 <source media="(min-width:1300px)" srcset="./images/logo_Inkoms - blanco.png">
                 <source media="(min-width:1000px)" srcset="./images/logo_Inkoms_background.png">
-                <img src="./images/pexels-cottonbro-3943723.jpg" alt="es una foto ejemplo" title="Es una imagen de">
-            </picture>
+                <img src="static/images/pexels-cottonbro-3943723.jpg" alt="es una foto ejemplo" title="Es una imagen de">
+            </picture> -->
 
-            <div class="c1"></div>
             <div class="c2"></div>
             <div class="c3"></div>
             <div class="c4"></div>
             <div class="c5"></div>
 
-            <div class="c6"></div>
-            <div class="c7"></div>
-            <div class="c8"></div>
-            <div class="c9"></div>
-            <div class="c10"></div>
 
             <h1>Soy el título principal</h1>
             
@@ -83,126 +90,77 @@
                 <p>Estamos convencidos que todas las personas merecen acceder a las mejores posibilidades de inversión</p>
             </section>
 
-            <div class="box-container">
-                <div class="box" id="one">box 1</div>
-                <div class="box" id="two">box 2</div>
-                <div class="box" id="three">box 3</div>
-                <div class="box" id="four">box 4</div>
-            </div>
-
-
-            
             <section>
+                <div class="box-container">
+                    <div class="box" id="one">box 1</div>
+                    <div class="box" id="two">box 2</div>
+                    <div class="box" id="three">box 3</div>
+                    <div class="box" id="four">box 4</div>
+                </div>
+
                 <h1>Soy el título</h1>
                 <div class="text-container">
                     <p>soy el párrafo </p>
                 </div>
             </section>
 
-            <p>Soy un texto</p>
-            <form action="">
-                <label for="hora">
-                    <span>Hora</span>
-                    <input type="time" id="hora" name="hora">
-                </label>
-            </form>
-
-            <!-- <select name="Mercados" id="">
-                <option value="Opción 1">Opción 1</option>
-                <option value="Opción 2">Opción 2</option>
-                <option value="Opción 3">Opción 3</option>
-                <option value="Opción 4">Opción 4</option>
-            </select> -->
-
-            <input list="Opciones">
-            <datalist id="Opciones">
-                <option value="Opción 1">Opción 1</option>
-                <option value="Opción 2">Opción 2</option>
-                <option value="Opción 3">Opción 3</option>
-                <option value="Opción 4">Opción 4</option>
-            </datalist>
-
-            <!-- <section>
+            <section>
                 <figure>
                     <img src="./images/pexels-cottonbro-3943723.jpg" alt="imagen de ahorro">
                     <figcaption>Ahorra e invierte para tu futuro</figcaption>
                 </figure>
-            </section> -->
-            <section>
-                <video controls preload="auto">
-                    <source src="" type="">
-                </video>
             </section>
-            <section>
-                <article>
-                    <p>soy un texto</p>
-                </article>
-            </section>
-            <section>
-                <form action="">
-                    <label for="nombre">
-                        <span>¿Cuál es tu nombre?</span>
-                        <input id="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
-                    </label>
-                    <label for="apellido">
-                        <span>¿Cuál es tu apellido?</span>
-                        <input id="apellido" type="text" placeholder="Tu apellido" autocomplete="family-name" required>
-                    </label>
-                    <label for="email">
-                        <span>¿Cuál es tu email?</span>
-                        <input id="email" type="email" placeholder="Tu email" autocomplete="email" required>
-                    </label>
-                    <label for="fecha-nacimiento">
-                        <span>¿Cuál es tu email?</span>
-                        <input id="fecha-nacimiento" type="date">
-                    </label>
-                    <input type="submit">
-                    <button type="submit">Escríbenos</button>
-                </form>
-            </section>
-            <ul>Hola</ul>
 
-                <li>Producto 1</li>
-                <li>Producto 2</li>
-                <li>Producto 3</li>
-
-            <ol></ol>
-        </main>
-        <footer class="site-footer">
-            <div>
+            <section>
                 <p>Soy un Párrafo</p>
                 <h1>Soy un título</h1>
                 <h2>Soy otro titulo</h2>
                 <h3>Soy otro título más</h3>
                 <a href="https://www.inkoms.com/">Visita Inkoms</a>
-            </div>
+            </section>
+        </main>
 
+            <!-- footer -->
+        <footer class="footer">
             <div>
-                <p>Conócenos</p>
-                <p>Quiénes somos</p>
-                <p>Términos y condiciones</p>
-                <p>Confianza y seguridad</p>
-            </div>
+                <div class="footer-links">
+                    <div class="footer-links__item">
+                        <p>Conócenos</p>
+                        <p>Quiénes somos</p>
+                        <p>Términos y condiciones</p>
+                        <p>Confianza y seguridad</p>
+                    </div>
 
-            <div>
-                <p>Escribe una Opinión</p>
-                <p>Agrega un producto</p>
-                <p>Únete a la comunidad</p>
-                <p>Centro de Ayuda</p>
-            </div>            
+                    <div class="footer-links__item">
+                        <p>Escribe una Opinión</p>
+                        <p>Agrega un producto</p>
+                        <p>Únete a la comunidad</p>
+                        <p>Centro de Ayuda</p>
+                    </div>            
 
-            <div>
-                <p>Contacto</p>
-                <p>contacto@inkoms.com</p>                
-            </div>
+                    <div class="footer-links__item">
+                        <p>Contacto</p>
+                        <p>contacto@inkoms.com</p>                
+                    </div>
 
-            <div>
-                <p>Síguenos</p>
-                <p>Instagram</p>
-                <p>Facebook</p>
-                <p>Linkedin</p>
+                    <div class="footer-links__item">
+                        <p>Síguenos</p>
+                        <p>Instagram</p>
+                        <p>Facebook</p>
+                        <p>Linkedin</p>
+                    </div>
+                </div>
+                    <!-- Copyright -->
+                <ul class="copyright">
+                    <li>
+                        <p>Copyright &copy;2021-2022.</p>
+                        <a href="https://www.agvcapitalgroup.com/">
+                            AGV Capital Group.
+                        </a>
+                        Todos los derechos reservados.
+                    </li>
+                </ul>
             </div>
-            <p>© 2022 AGV Capital Group Todos los derechos reservados</p>
         </footer>
     </body>
 </html>
