@@ -1,5 +1,17 @@
 
-.c2,
+.menu {
+    display: none;
+}
+.navbar-left ul {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    /* text-align: -webkit-match-parent; */
+    /* display: inline-block; */
+}
+
+
+/* .c2,
 .c3,
 .c4 {
     width: 50%;
@@ -28,4 +40,4 @@
 
 .logo {
     display: block;
-}
+} */

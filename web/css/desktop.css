@@ -1,4 +1,17 @@
 
+.menu {
+    display: none;
+}
+.navbar-left ul {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    /* text-align: -webkit-match-parent; */
+    /* display: inline-block; */
+}
+
+
+/* 
 .container {
     width: 800px;
     margin-left: auto;
@@ -41,4 +54,4 @@
 
 header .title {
     display: none;
-}
+} */
