@@ -9,7 +9,7 @@ instalar Django
 pip install django
 
 crear/Inicializar proyecto
-django-admin startproject InkomsAp
+django-admin startproject app_name
 
 start project
 py manage.py runserver
