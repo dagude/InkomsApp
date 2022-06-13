@@ -2,10 +2,15 @@ import django
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import Question
+
 
 # Views.
 def index(request):
-    return(HttpResponse("Estás en la página principal"))
+    latest_question_list = Question.objects.all()
+    return(render(request, "polls/index.html", { 
+        'latest_question_list': latest_question_list }
+    ))
 
 
 def detail(request, question_id):
