@@ -10,6 +10,7 @@ pip install django
 
 crear/Inicializar proyecto
 django-admin startproject project_name
+or py django-admin startproject usuarios
 
 crear una aplicación
 py manage.py startapp app_name

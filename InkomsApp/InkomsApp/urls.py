@@ -16,9 +16,19 @@ Including another URLconf
 
 from xml.etree.ElementInclude import include
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from perfiles.views import SignUpView, BienvenidaView, SignInView, SignOutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls'))
+]
+
+
+urlpatterns = [
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^$', BienvenidaView.as_view(), name='bienvenida'),
+    re_path(r'^registrate/$', SignUpView.as_view(), name='sign_up'),
+    re_path(r'^incia-sesion/$', SignInView.as_view(), name='sign_in'),
+    re_path(r'^cerrar-sesion/$', SignOutView.as_view(), name='sign_out'),
 ]

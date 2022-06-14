@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
+    'perfiles.apps.PerfilesConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Para que la vista nos redirija al index después de validado del formulario 
+LOGIN_URL = '/inicia-sesion/'
+LOGIN_REDIRECT_URL = '/'
+
+# Para el logout
+LOGOUT_REDIRECT_URL = '/'
