@@ -1,0 +1,61 @@
+.main-tables-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 600px; */
+    margin: 0 auto; 
+}
+
+.product-cards--container {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 600px; */
+    margin: 0 auto;
+}
+
+.plans-conatiner--slider {
+    justify-content: center;
+}
+
+
+
+/* .menu {
+    display: none;
+} */
+/* .navbar-left ul {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    /* text-align: -webkit-match-parent; */
+    /* display: inline-block; */
+
+
+/* .c2,
+.c3,
+.c4 {
+    width: 50%;
+}
+
+.c6 {
+    width: 25%;
+    order: 1;
+}
+.c7 {
+    width: 75%;
+    order: 2;
+}
+.c8 {
+    width: 100%;
+    order: 3;
+}
+.c9 {
+    width: 100%;
+    order: 4;
+}
+.c10 {
+    width: 100%;
+    order: 5;
+}
+
+.logo {
+    display: block;
+} */

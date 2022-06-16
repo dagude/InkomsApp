@@ -63,20 +63,23 @@ h1 {
   } */
 
 nav {
+    width: 100%;
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    top: 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1.2rem;
     border-bottom: 1px solid var(--black-color);
-    top: 0;
-    position: sticky;
-    position: -webkit-sticky;
+
 }
 
 .menu {
     display: block;
-
 }
+
 .logo {
     max-height: 5.6rem;
     height: auto;
@@ -88,6 +91,7 @@ nav {
 .navbar-left {
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .navbar-left ul {
@@ -134,6 +138,11 @@ nav {
     height: 18px;
 }
 
+.navbar-search-icon:hover {
+    color: #3498db;
+    cursor: pointer;
+  }
+
 /* header {
     position: sticky;
     width: 100%;
@@ -151,10 +160,6 @@ nav {
     justify-content: flex-end;
 } */
 
-/* .header-nav__logo {
-    display: flex;
-    align-items: center;
-} */
 
 /* header nav .header-nav__left {
     width: 300px;
@@ -265,6 +270,7 @@ footer {
     height: 15vh;
     background-color: var(--black-color);
     color: var(--white-color);
+    
     justify-content: center;
     position: relative;
     bottom: 0;

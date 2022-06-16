@@ -1,0 +1,94 @@
+.main-tables-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 600px; */
+    margin: 0 auto; 
+}
+
+.product-cards--container {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 600px; */
+    margin: 0 auto;
+}
+
+.plans-conatiner--slider {
+    justify-content: center;
+}
+
+
+/* 
+
+
+.menu {
+    display: none;
+}
+
+.navbar-left ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-around; */
+    /* text-align: -webkit-match-parent; */
+    /* display: inline-block; */
+
+/*
+.main-title {
+    height: 90vh;
+    width: 100vw;
+    padding: 4.8rem;
+    margin: 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+
+    color: var(--primary-color);
+    font-size: 6.4rem;
+    font-weight: bold;
+} */
+
+/* 
+.container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.c1 {
+    width: 60%;
+}
+.c2 {
+    width: 40%;
+}
+.c3,
+.c4 {
+    width: 33%;
+}
+.c5 {
+    width: 34%;
+}
+
+
+.c6 {
+    width: 30%;
+}
+.c7 {
+    width: 40%;
+}
+.c8 {
+    width: 30%;
+}
+.c9 {
+    width: 50%;
+}
+.c10 {
+    width: 50%;
+}
+
+.logo {
+    display: block;
+}
+
+header .title {
+    display: none;
+} */

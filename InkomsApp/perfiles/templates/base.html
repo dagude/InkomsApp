@@ -1,12 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-    {% block content %}
+{% load static %}
 
-    {% endblock content %}
-</body>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Plataforma abierta de inversiones">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{% static 'perfiles/css/reset.css' %}">
+        <link
+            rel="stylesheet"
+            href="{% static 'perfiles/css/style.css' %}"
+        > <!-- Estilos enfocados en mobile -->
+        <link 
+            rel="stylesheet"
+            href="{% static "perfiles/css/tablet.css" %}"
+            media="screen and (min-width:600px)"
+        > <!-- Estilos enfocados en tablet -->
+        <link
+            rel="stylesheet"
+            href="{% static "perfiles/css/desktop.css" %}"
+            media="screen and (min-width:800px)"    
+        > <!-- Estilos enfocados en desktop -->
+
+        <title>
+            {% block title %}
+                
+
+            {% endblock %}
+        </title>
+
+        {% comment %} fonts {% endcomment %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+    
+    <body>
+
+        <header class="header">
+            <nav class="header-nav">
+                <img class="menu" src="{% static 'perfiles/icons/icon_menu.svg' %}" alt="menu">
+
+                <div class="navbar-left">
+                    
+                    <img src="{% static 'perfiles/images/logo_Inkoms_blanco.png' %}" alt="logo" class="logo">
+
+                    <ul>
+                        <li>
+                            <a href="/">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="/">Quiénos somos</a>
+                        </li>
+                        <li>
+                            <a href="/">Industria</a>
+                        </li>
+                        <li>
+                            <a href="/">Contáctanos</a>
+                        </li>
+                        <li>
+                            <a href="/">Inicia sesión</a>
+                        </li>
+                        <li>
+                            <a href="/">Únete</a>
+                        </li>
+                    </ul>
+                </div>
+            
+                <div class="navbar-right">
+                    <ul>
+                        <li class="navbar-search-icon">
+                            <span class="search-icon"></span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <main class="main">
+
+            <section class="main-title">
+                <div class="main-title__items">
+                    <h1>
+                        Inversiones profesionales al alcance de todos
+                    </h1>
+                    <h2>
+                        Te acompañamos para que tomes la mejor decisión
+                    </h2>
+                </div>
+            </section>
+
+            <section class="main-section">
+                <div>
+                    <h1>
+                        Inversiones al alcance de todos
+                    </h1>
+                </div>
+
+                <div>
+                    <p>Estamos convencidos que todas las personas merecen acceder a las mejores posibilidades de inversión</p>
+                </div>
+            </section>
+
+            <section class="main-section">
+                <div class="box-container">
+                    <div class="box" id="one">box 1</div>
+                    <div class="box" id="two">box 2</div>
+                    <div class="box" id="three">box 3</div>
+                    <div class="box" id="four">box 4</div>
+                </div>
+
+                <h1>Soy el título</h1>
+                <div class="text-container">
+                    <p>soy el párrafo </p>
+                </div>
+            </section>
+
+            <section class="main-section">
+                <div class="box-container">
+                    <div class="box" id="one">box 1</div>
+                    <div class="box" id="two">box 2</div>
+                    <div class="box" id="three">box 3</div>
+                    <div class="box" id="four">box 4</div>
+                </div>
+
+                <h1>Soy el título</h1>
+                <div class="text-container">
+                    <p>soy el párrafo </p>
+                </div>
+            </section>
+        </main>
+        {% block content %}
+
+        {% endblock content %}
+        <footer>
+            <div>
+                <div class="footer-links">
+                    <div class="footer-links__item">
+                        <a href="#">
+                            <h2>
+                                Conócenos
+                            </h2>
+                        </a>
+                        <p>Quiénes somos</p>
+                        <a href="https://inkoms.com"></a>
+                        <a href="#">Términos y Condiciones</a>
+                        <a href="#">Política de Privacidad</a>
+                        <p>Confianza y seguridad</p>
+                    </div>
+
+                    <div class="footer-links__item">
+                        <p>Escribe una Opinión</p>
+                        <p>Agrega un producto</p>
+                        <p>Únete a la comunidad</p>
+                        <p>Centro de Ayuda</p>
+                    </div>            
+
+                    <div class="footer-links__item">
+                        <a href="#">
+                            <h2>
+                                Contácto
+                            </h2>
+                        </a>
+                        <p>contacto@inkoms.com</p>                
+                        
+                        <div class="footer-links__social">
+                            <a href="#">
+                                <img src="{% static 'perfiles/icons/logotipo-circular-de-facebook.png' %}" alt="facebook"/>
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'perfiles/icons/logotipo-de-instagram.png' %}" alt="instagram"/>
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'perfiles/icons/logotipo-de-linkedin.png' %}" alt="linkedin"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                        <!-- Copyright -->
+                    <ul class="copyright">
+                        <li>
+                            <p>Copyright &copy;2021-2022.</p>
+                            <a href="https://www.agvcapitalgroup.com/">
+                                AGV Capital Group.
+                            </a>
+                            Todos los derechos reservados.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
