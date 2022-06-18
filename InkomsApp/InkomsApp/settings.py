@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&pxxz*pl5=22%yd2xm@zkr@_v+$b4_bz0w(rktn-qn@@+-h*s*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['http://www.inkoms.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -110,6 +110,8 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
