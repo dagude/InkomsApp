@@ -24,3 +24,6 @@ py manage.py migrate
 
 Test
 py manage.py test app_name
+
+crear super usuario
+py manage.py createsuperuser
