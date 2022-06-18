@@ -3,10 +3,31 @@
 {% block title %}Inicia Sesión{% endblock %}
 
 {% block content %}
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" name="submit">
-    </form>
+
+  <form method="POST" class="form">
+
+    {% csrf_token %}
+    <div class="form-group">
+      {{ form.as_p }}
+    </div>
+
+    <input
+      type="submit"
+      name="submit"
+      value="Inicia sesión"
+      class="primary-button login-button"
+    >
+    <a href="/">
+      ¿Olvidaste tu contraseña?
+    </a>
+
+    <h2>¿Aún no tienes cuenta en Inkoms?</h2>
+
+    <a class="secondary-button signup-button"
+      href="{% url 'sign_up' %}">
+      Regístrate
+    </a>
+
+  </form>
 
 {% endblock content %}

@@ -1,15 +1,23 @@
-
 {% extends "base.html" %}
 
-{% block title %}
-    Registrate
-{% endblock %}
+{% block title %}Regístrate{% endblock %}
 
 {% block content %}
-    <form action="" method="POST">
+
+    <form action="" method="POST" class="form">
+
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" name="submit">
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+
+        <input
+            type="submit"
+            name="submit"
+            value="Registrarse"
+            class="primary-button login-button"
+        >
+
     </form>    
 {% endblock content %}
 

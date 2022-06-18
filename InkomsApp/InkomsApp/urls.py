@@ -21,14 +21,11 @@ from perfiles.views import SignUpView, BienvenidaView, SignInView, SignOutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('polls/', include('polls.urls'))
-]
-
-
-urlpatterns = [
+    path('polls/', include('polls.urls')),
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^$', BienvenidaView.as_view(), name='bienvenida'),
     re_path(r'^registrate/$', SignUpView.as_view(), name='sign_up'),
-    re_path(r'^incia-sesion/$', SignInView.as_view(), name='sign_in'),
+    re_path(r'^inicia-sesion/$', SignInView.as_view(), name='sign_in'),
     re_path(r'^cerrar-sesion/$', SignOutView.as_view(), name='sign_out'),
+    # re_path(r'^cerrar-sesion/$', SignOutView.as_view(), name='new_password'),
 ]

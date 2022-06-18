@@ -1,8 +1,9 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
+    <html lang="es">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Plataforma abierta de inversiones">
@@ -34,209 +35,73 @@
         {% endblock %}
     </title>
 
+    <style>
+    </style>
 </head>
+
 <body>
     <header>
         <nav class="header-nav">
-            <img
-            src="{% static '/perfiles/images/logo_Inkoms_blanco.png' %}"
-            alt="Inkoms"
-        >
+            <input type="checkbox" name="" id="nav__checkbox" class="nav__checkbox"/>
+            <label for="nav__checkbox" class="nav__toggle">
+              
+                <svg class="menu" viewBox="0 0 448 512" width="100" title="bars">
+                    <path
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+                </svg>
+          
+              
+                <svg class="close" viewBox="0 0 384 512" width="100" title="times">
+                    <path
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+                </svg>
+            </label>
+          
+            <ul class="nav__menu">
+                <li class="menu__logo">
+                    <img src="images/logo1.webp" alt="" />
+                    <img src="images/logo2.webp" alt="" />
+                    <img
+                        src="{% static '/perfiles/images/logo_Inkoms_blanco.png' %}"
+                        alt="Inkoms"
+                    >
+                </li>
+                <li>
+                    <a href="#">Quiénes Somos</a>
+                </li>
+                <li>
+                    <a href="#">Contáctanos</a>
+                </li>
+            </ul>
         </nav>
 
         <div class="header--title-container">
-            <h1>Inversiones profesionales al alcance de todos</h1>
-            <p>Te acompañamos para que tomes la mejor decisión</p>
-            <a href="{% url 'bienvenida' %}" class="header--button">Iniciar sesión <span></span></a>
+            <h1>¡Bienvenidos!</h1>
+            <p>Trabajamos para ofrecerte la mejor experiencia</p>
         </div>
     </header>
 
     <main>
-        <section class="main-container">
-            <div class="backgroundImg">
+        <section id="user">      
+            <div class="login">
+                <div class="form-container">
+                    <a href="/" class="index">
+                        <img
+                        src="{% static '/perfiles/images/logo_Inkoms_blanco.png' %}"
+                        alt="Inkoms"
+                        class="logo">
+                    </a>
 
-            </div>
-            <div class="main-container--title">
-                <h2>Encuentra información del mercado</h2>
-                <p>Traemos información actualizada de los produtos de la industria</p>
-            </div>
-            <section class="main-tables-container">
-                <div class="main-return-table">
-                    <p class="return-table--title">Retornos</p>
-                    <div class="return-table--container">
-                        <table>
-                            <tr>
-                                <td class="table__top-left">Producto 1</td>
-                                <td class="table__top-right table__right">X% <span>+</span></td>
-                            </tr>
-                            <tr>
-                                <td>Producto 2</td>
-                                <td class=" table__right">X% <span>-</span></td>
-                            </tr>
-                            <tr>
-                                <td>Producto 3</td>
-                                <td class=" table__right">X% <span>+</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__bottom-left">Producto 4</td>
-                                <td class="table__bottom-right table__right">X% <span>-</span></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="return-table--date">
-                        <p>
-                            Actualizado: <b> 19 Julio</b>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="main-return-table">
-                    <p class="return-table--title">Retornos</p>
-                    <div class="return-table--container">
-                        <table>
-                            <tr>
-                                <td class="table__top-left">Producto 1</td>
-                                <td class="table__top-right table__right">X% <span>+</span></td>
-                            </tr>
-                            <tr>
-                                <td>Producto 2</td>
-                                <td class=" table__right">X% <span>-</span></td>
-                            </tr>
-                            <tr>
-                                <td>Producto 3</td>
-                                <td class=" table__right">X% <span>+</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__bottom-left">Producto 4</td>
-                                <td class="table__bottom-right table__right">X% <span>-</span></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="return-table--date">
-                        <p>
-                            Actualizado: <b> 19 Julio</b>
-                        </p>
-                    </div>
-                </div>
-
-            </section>
-        </section>
-
-        <section class="main-product-detail">
-            <span class="product-detail--flecha"></span>
-            <div class="product-detail--title">
-                <h2>
-                    Creamos una plataforma sin comparación
-                </h2>
-                <p>Estamos convencidos de que todas las personas merecen acceder a las mejores posibilidades de inversión para alcanzar sus objetivos</p>
-            </div>
-            <section class="product-cards--container">
-                <article class="product-detail--card">
-                    <span class="check"></span>
-                    <p class="product--card-title">
-                        Confianza y Facilidad
-                    </p>
-                    <p class="product--card-body">
-                        Tus inversiones siempre estarán a tu nombre y respaldadas legalmente para tu tranquilidad
-                    </p>
-                </article>
-
-                <article class="product-detail--card">
-                    <span class="clock"></span>
-                    <p class="product--card-title">
-                        Accede a Mercados Privados
-                    </p>
-                    <p class="product--card-body">
-                        Ofrecemos una selección de oportunidades de inversión que antes sólo estaban disponibles para institucionales y ultra ricos
-                    </p>
-                </article>
-
-                <article class="product-detail--card">
-                    <span class="dollar"></span>
-                    <p class="product--card-title">
-                        Genera ingresos, Crecimiento y Preserva tu capital
-                    </p>
-                    <p class="product--card-body">
-                        Productos diseñados para que puedas cumplir tus objetivos de inversión
-                    </p>
-                </article>
-
-                <article class="product-detail--card">
-                    <span class="eye"></span>
-                    <p class="product--card-title">
-                        Calidad y Transparencia
-                    </p>
-                    <p class="product--card-body">
-                        Todas las alternativas son examinadas y evaluadas por un equipo experimentado de inversiones, monitorea tus inversiones y recibe información de las alternativas de la industria
-                    </p>
-                </article>
-            </section>
-        </section>
-
-        <section class="background-img-container">
-            <h2>Conócelo hoy.</h2>
-        </section>
-
-        <section id="plans" class="main-plans-container">
-            <div class="plans--title">
-                <h2>
-                    Escoge el plan que mejor se ajuste a ti
-                </h2>
-                <p>
-                    Cualquier plan te da acceso completo aa nuestra plataforma.
-                </p>
-            </div>
-            <section class="plans-conatiner--slider">
-                <article class="plans-container--card">
-                    <p class="recommended">Recomendado</p>
-                    <div class="plan-info-container">
-                        <h3 class="plan-card--title">
-                            Pago Anual
-                        </h3>
-                        <p class="plan-card--price"><span>$</span> 99</p>
-                        <p class="plan-card--saving">* Ahorra $129 comparadoal plan mensual</p>
-                        <button class="plan-card--ca">Escoger este <span></span></button>
-                    </div>
-                </article>
-
-                <article class="plans-container--card">
-                    <p class="recommended">Recomendado</p>
-                    <div class="plan-info-container">
-                        <h3 class="plan-card--title">
-                            Pago Anual
-                        </h3>
-                        <p class="plan-card--price"><span>$</span> 99</p>
-                        <p class="plan-card--saving">* Ahorra $129 comparadoal plan mensual</p>
-                        <button class="plan-card--ca">Escoger este <span></span></button>
-                    </div>
-                </article>
-
-                <article class="plans-container--card">
-                    <p class="recommended">Recomendado</p>
-                    <div class="plan-info-container">
-                        <h3 class="plan-card--title">
-                            Pago Anual
-                        </h3>
-                        <p class="plan-card--price"><span>$</span> 99</p>
-                        <p class="plan-card--saving">* Ahorra $129 comparadoal plan mensual</p>
-                        <button class="plan-card--ca">Escoger este <span></span></button>
-                    </div>
-                </article>
-
-            </section>
-        </section>
-        <section>
-            {% block content %}
-
-            {% endblock content %}            
         
-            <h2>¡Bienvenidos!</h2>
-            <p>
-                Estamos trabajando para ofrecerte la mejor experiencia
-            </p>
+                    {% block content %}
+        
+                    {% endblock content %}
+
+                </div>
+            </div>
         </section>
     </main>
-    
+
     <footer>
         <section class="footer-up">
             <section class="footer-left">
@@ -289,5 +154,6 @@
             </ul>
         </section>
     </footer>
+
 </body>
 </html>
