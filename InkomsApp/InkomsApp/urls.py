@@ -20,7 +20,7 @@ from django.urls import path, include, re_path
 from perfiles.views import SignUpView, BienvenidaView, SignInView, SignOutView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^$', BienvenidaView.as_view(), name='bienvenida'),
