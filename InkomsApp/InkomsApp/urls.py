@@ -19,6 +19,9 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from perfiles.views import SignUpView, BienvenidaView, SignInView, SignOutView
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
@@ -29,3 +32,6 @@ urlpatterns = [
     re_path(r'^cerrar-sesion/$', SignOutView.as_view(), name='sign_out'),
     # re_path(r'^cerrar-sesion/$', SignOutView.as_view(), name='new_password'),
 ]
+
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
