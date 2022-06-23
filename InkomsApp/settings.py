@@ -141,9 +141,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "perfiles/static")]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, "perfiles/static") 
+    STATIC_ROOT = os.path.join(BASE_DIR, "./static/") 
     # STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")   
 
 # STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")

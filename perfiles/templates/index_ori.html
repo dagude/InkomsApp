@@ -15,16 +15,16 @@
 
     <link
         rel="stylesheet"
-        href="{% static 'perfiles/css/styles.css' %}"
+        href="{% static 'css/styles.css' %}"
     > <!-- Estilos enfocados en mobile -->
     <link 
         rel="stylesheet"
-        href="{% static "perfiles/css/tablet.css" %}"
+        href="{% static "css/tablet.css" %}"
         media="screen and (min-width:600px)"
     > <!-- Estilos enfocados en tablet -->
     <link
         rel="stylesheet"
-        href="{% static "perfiles/css/desktop.css" %}"
+        href="{% static "css/desktop.css" %}"
         media="screen and (min-width:800px)"    
     > <!-- Estilos enfocados en desktop -->
     
@@ -64,15 +64,12 @@
                 </li>
 
                 <li>
-                    <div class="block-user">
-                        {% block content %}
+                    {% block content %}
 
-                        {% endblock content %}  
-                    </div>  
+                    {% endblock content %}    
                 </li>
 
-            </ul>
-            
+            </ul>       
         </nav>
 
         <div class="header--title-container">
@@ -258,10 +255,13 @@
 
             </section>
         </section>
-
-        <section class="main-welcome">
+        <section>
+         
+        
             <h2>¡Bienvenidos!</h2>
-            <p>Trabajamos para ofrecerte la mejor experiencia</p>
+            <p>
+                Estamos trabajando para ofrecerte la mejor experiencia
+            </p>
         </section>
     </main>
     
