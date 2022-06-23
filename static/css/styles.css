@@ -56,7 +56,7 @@ header {
 .header-nav {
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 60px;
     top: 0;
     background-color: var(--white);
     /* border-bottom: 1px solid var(--grey); */
@@ -92,7 +92,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 1rem;
+    margin: 0.5rem;
     background-color: var(--white);
     border-radius: 5px;
     line-height: 4rem;
@@ -115,7 +115,7 @@ header {
 }
 
 .menu__logo {
-    height: 30px;
+    height: 50px;
 }
 
 .menu__logo img {
