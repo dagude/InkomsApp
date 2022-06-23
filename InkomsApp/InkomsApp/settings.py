@@ -30,19 +30,20 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '*',
-    # 'www.inkoms.com',
-    # 'http://www.inkoms.com',
-    # 'inkoms.com',
-    # '.localhost',
-    # '127.0.0.1',
-    # '[::1]'
+    # '*',
+    'www.inkoms.com',
+    'http://www.inkoms.com',
+    'inkoms.com',
+    '.localhost',
+    '127.0.0.1',
+    '[::1]'
     ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "whitenoise.runserver_nostatic", # To ease serving static files via Azure
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,13 +52,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'perfiles.apps.PerfilesConfig',
-    # "whitenoise.runserver_nostatic", # To ease serving static files via Azure
 ]
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # "whitenoise.middleware.WhiteNoiseMiddleware",  # <---- WhiteNoise!
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # <---- WhiteNoise!
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -143,11 +143,12 @@ if DEBUG:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, "perfiles/static")]
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, "perfiles/static") 
-    # STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "/static/")
+    # STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")   
 
 # STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 
 # Default primary key field type

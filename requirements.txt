@@ -1,4 +1,10 @@
-django
+Django
 django-crispy-forms
 whitenoise
 python-dotenv
+asgiref
+django-crispy-forms
+python-dotenv
+sqlparse
+tzdata
+
