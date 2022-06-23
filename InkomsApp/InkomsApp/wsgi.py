@@ -16,9 +16,12 @@ application = get_wsgi_application()
 
 # whitenoise - se incluye
 
-from whitenoise import WhiteNoise
+# from whitenoise import WhiteNoise
+# from InkomsApp import perfiles
 
-# from InkomsApp import wsgi
+# # from InkomsApp import wsgi
 
-# application = WhiteNoise(application, root="/path/to/static/")
-# application.add_files("/path/to/more/static/", prefix="more-files/")
+# application = perfiles()
+
+# application = WhiteNoise(application, root="/path/to/static/files")
+# application.add_files("/path/to/more/static/files", prefix="more-files/")

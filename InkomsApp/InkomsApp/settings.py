@@ -30,12 +30,13 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'www.inkoms.com',
-    'http://www.inkoms.com',
-    'inkoms.com',
-    '.localhost',
-    '127.0.0.1',
-    '[::1]'
+    '*',
+    # 'www.inkoms.com',
+    # 'http://www.inkoms.com',
+    # 'inkoms.com',
+    # '.localhost',
+    # '127.0.0.1',
+    # '[::1]'
     ]
 
 
@@ -50,13 +51,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'perfiles.apps.PerfilesConfig',
-    "whitenoise.runserver_nostatic", # To ease serving static files via Azure
+    # "whitenoise.runserver_nostatic", # To ease serving static files via Azure
 ]
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # whitenoise
+    # "whitenoise.middleware.WhiteNoiseMiddleware",  # <---- WhiteNoise!
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,10 +137,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-# STATIC_URL = '/static/'
-STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")
-STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "")  # ./static/
-STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
+STATIC_URL = '/static/'
+
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "perfiles/static")]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, "perfiles/static") 
+    # STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "/static/")
+
+# STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
