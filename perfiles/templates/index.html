@@ -49,12 +49,12 @@
           
             <ul class="nav__menu">
                 <li class="menu__logo">
-                    <img src="images/logo1.webp" alt="" />
-                    <img src="images/logo2.webp" alt="" />
-                    <img
+                    <a href="/" class="index">
+                        <img
                         src="{% static '/images/logo_inkoms.png' %}"
                         alt="Inkoms"
-                    >
+                        class="logo">
+                    </a>
                 </li>
                 <li>
                     <a href="#">Quiénes Somos</a>
@@ -78,7 +78,7 @@
         <div class="header--title-container">
             <h1>Inversiones profesionales al alcance de todos</h1>
             <p>Te acompañamos para que tomes la mejor decisión</p>
-            <a href="{% url 'bienvenida' %}" class="header--button">Iniciar sesión <span></span></a>
+            <a href="{% url 'sign_in' %}" class="header--button">Iniciar sesión <span></span></a>
         </div>
     </header>
 
@@ -226,7 +226,7 @@
                         <h3 class="plan-card--title">
                             Free
                         </h3>
-                        <p class="plan-card--price"><span>$</span> 99</p>
+                        <p class="plan-card--price"><span>$</span> 0</p>
                         <p class="plan-card--saving">* Ahorra $129 comparado al plan mensual</p>
                         <a class="plan-card--ca" href="{% url 'bienvenida' %}">Ingresa <span></span></a>
                     </div>
@@ -238,7 +238,7 @@
                         <h3 class="plan-card--title">
                             Free
                         </h3>
-                        <p class="plan-card--price"><span>$</span> 99</p>
+                        <p class="plan-card--price"><span>$</span> 0</p>
                         <p class="plan-card--saving">* Ahorra $129 comparado al plan mensual</p>
                         <a class="plan-card--ca" href="{% url 'bienvenida' %}">Ingresa <span></span></a>
                     </div>
@@ -250,7 +250,7 @@
                         <h3 class="plan-card--title">
                             Pago Anual
                         </h3>
-                        <p class="plan-card--price"><span>$</span> 99</p>
+                        <p class="plan-card--price"><span>$</span> 0</p>
                         <p class="plan-card--saving">* Ahorra $129 comparado al plan mensual</p>
                         <a class="plan-card--ca" href="{% url 'bienvenida' %}">Ingresa <span></span></a>
                     </div>
@@ -278,9 +278,12 @@
             </section>
 
             <section class="footer-right">
-                <img 
-                    src="{% static '/images/logo_inkoms.png' %}" alt="inkoms"
-                >
+                <a href="/" class="index">
+                    <img
+                    src="{% static '/images/logo_inkoms.png' %}"
+                    alt="Inkoms"
+                    class="logo">
+                </a>
                 <h2>Síguenos</h2>
                 <ul class="footer-right--redes">
                     <li>

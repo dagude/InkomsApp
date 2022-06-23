@@ -59,12 +59,12 @@
           
             <ul class="nav__menu">
                 <li class="menu__logo">
-                    <img src="images/logo1.webp" alt="" />
-                    <img src="images/logo2.webp" alt="" />
-                    <img
+                    <a href="/" class="index">
+                        <img
                         src="{% static '/images/logo_inkoms.png' %}"
                         alt="Inkoms"
-                    >
+                        class="logo">
+                    </a>
                 </li>
                 <li>
                     <a href="#">Quiénes Somos</a>
@@ -115,9 +115,12 @@
             </section>
 
             <section class="footer-right">
-                <img 
-                    src="{% static '/images/logo_inkoms.png' %}" alt="inkoms"
-                >
+                <a href="/" class="index">
+                    <img
+                    src="{% static '/images/logo_inkoms.png' %}"
+                    alt="Inkoms"
+                    class="logo">
+                </a>
                 <h2>Síguenos</h2>
                 <ul class="footer-right--redes">
                     <li>
