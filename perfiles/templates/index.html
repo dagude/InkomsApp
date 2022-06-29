@@ -85,6 +85,7 @@
     </header>
 
     <main>
+        
         <section class="main-container">
             <div class="backgroundImg">
 
@@ -93,66 +94,6 @@
                 <h2>Encuentra información del mercado</h2>
                 <p>Traemos información actualizada de los produtos de la industria</p>
             </div>
-            <section class="main-tables-container">
-                <div class="main-return-table">
-                    <p class="return-table--title">Retornos</p>
-                    <div class="return-table--container">
-                        <table>
-                            <tr>
-                                <td class="table__top-left">Producto 1</td>
-                                <td class="table__top-right table__right">X% <span>+</span></td>
-                            </tr>
-                            <tr>
-                                <td>Producto 2</td>
-                                <td class=" table__right">X% <span>-</span></td>
-                            </tr>
-                            <tr>
-                                <td>Producto 3</td>
-                                <td class=" table__right">X% <span>+</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__bottom-left">Producto 4</td>
-                                <td class="table__bottom-right table__right">X% <span>-</span></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="return-table--date">
-                        <p>
-                            Actualizado: <b> 19 Julio</b>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="main-return-table">
-                    <p class="return-table--title">Retornos</p>
-                    <div class="return-table--container">
-                        <table>
-                            <tr>
-                                <td class="table__top-left">Producto 1</td>
-                                <td class="table__top-right table__right">X% <span>+</span></td>
-                            </tr>
-                            <tr>
-                                <td>Producto 2</td>
-                                <td class=" table__right">X% <span>-</span></td>
-                            </tr>
-                            <tr>
-                                <td>Producto 3</td>
-                                <td class=" table__right">X% <span>+</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__bottom-left">Producto 4</td>
-                                <td class="table__bottom-right table__right">X% <span>-</span></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="return-table--date">
-                        <p>
-                            Actualizado: <b> 19 Julio</b>
-                        </p>
-                    </div>
-                </div>
-
-            </section>
         </section>
 
         <section class="main-product-detail">
@@ -170,7 +111,7 @@
                         Confianza y Facilidad
                     </p>
                     <p class="product--card-body">
-                        Tus inversiones siempre estarán a tu nombre y respaldadas legalmente para tu tranquilidad
+                        Invierte facilmente, de forma ágil y siempre a tu nombre para tu tranquilidad
                     </p>
                 </article>
 
@@ -200,7 +141,7 @@
                         Calidad y Transparencia
                     </p>
                     <p class="product--card-body">
-                        Todas las alternativas son examinadas y evaluadas por un equipo experimentado de inversiones, monitorea tus inversiones y recibe información de las alternativas de la industria
+                        Todas las alternativas son examinadas y evaluadas por un equipo experimentado, monitorea tus inversiones y recibe información de las alternativas de la industria
                     </p>
                 </article>
             </section>
@@ -221,6 +162,7 @@
                     Todos los usuarios tienen acceso completo a nuestra plataforma.
                 </p>
             </div>
+            
             <section class="plans-container--slider">
                 <article class="plans-container--card">
                     <p class="recommended">Empresas</p>
@@ -228,7 +170,7 @@
                         <h3 class="plan-card--title">
                             ¡Gratis!
                         </h3>
-                        <p class="plan-card--price"><span>$</span> 0</p>
+                        <p class="plan-card--price"><span>$</span>0</p>
                         <p class="plan-card--saving">Compara y encuentra opciones para los objetivos de tu compañía</p>
                         <a class="plan-card--ca" href="{% url 'bienvenida' %}">Ingresa <span></span></a>
                     </div>
@@ -240,8 +182,8 @@
                         <h3 class="plan-card--title">
                             ¡Gratis!
                         </h3>
-                        <p class="plan-card--price"><span>$</span> 0</p>
-                        <p class="plan-card--saving">Encuentra alternativas de inversión tradicional y alternativas en un único punto</p>
+                        <p class="plan-card--price"><span>$</span>0</p>
+                        <p class="plan-card--saving">Encuentra en un único punto todo tipo de alternativas de inversión</p>
                         <a class="plan-card--ca" href="{% url 'bienvenida' %}">Ingresa <span></span></a>
                     </div>
                 </article>
@@ -252,19 +194,79 @@
                         <h3 class="plan-card--title">
                             ¡Colaboremos Juntos!
                         </h3>
-                        <p class="plan-card--price"><span>%</span> 100</p>
+                        <p class="plan-card--price"><span>%</span>100</p>
                         <p class="plan-card--saving">Unidos podemos llevar las inversiones a otro nivel</p>
                         <a class="plan-card--ca" href="{% url 'bienvenida' %}">Ingresa <span></span></a>
                     </div>
                 </article>
-
             </section>
+        </section>
+
+        <section class="main-tables-container">
+            <div class="main-return-table">
+                <p class="return-table--title">Valor del Fondo</p>
+                <div class="return-table--container">
+                    <table>
+                        <tr>
+                            <td class="table__top-left">Producto 1</td>
+                            <td class="table__top-right table__right">COP 11.7 <span>billones</span></td>
+                        </tr>
+                        <tr>
+                            <td>Producto 2</td>
+                            <td class=" table__right">COP 7.1 <span>billones</span></td>
+                        </tr>
+                        <tr>
+                            <td>Producto 3</td>
+                            <td class=" table__right">COP 4.5 <span>billones</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table__bottom-left">Producto 4</td>
+                            <td class="table__bottom-right table__right">COP 3.1 <span>billones</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="return-table--date">
+                    <p>
+                        Actualizado: <b> 30 de abril 2022</b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="main-return-table">
+                <p class="return-table--title">Retorno Anual</p>
+                <div class="return-table--container">
+                    <table>
+                        <tr>
+                            <td class="table__top-left">Producto 1</td>
+                            <td class="table__top-right table__right">X% <span>+</span></td>
+                        </tr>
+                        <tr>
+                            <td>Producto 2</td>
+                            <td class=" table__right">X% <span>-</span></td>
+                        </tr>
+                        <tr>
+                            <td>Producto 3</td>
+                            <td class=" table__right">X% <span>+</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table__bottom-left">Producto 4</td>
+                            <td class="table__bottom-right table__right">X% <span>-</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="return-table--date">
+                    <p>
+                        Actualizado: <b> 30 de abril 2022</b>
+                    </p>
+                </div>
+            </div>
         </section>
 
         <section class="main-welcome">
             <h2>¡Bienvenidos!</h2>
             <p>Trabajamos para ofrecerte la mejor experiencia</p>
         </section>
+
     </main>
     
     <footer>
