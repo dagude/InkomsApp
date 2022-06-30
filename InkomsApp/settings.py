@@ -65,6 +65,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Added for caching:
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 
@@ -83,6 +87,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'string_if_invalid': 'The admin has some work to do!'
         },
     },
 ]
@@ -139,12 +144,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = ''
+
 
 if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "/static/")]
+    # STATICFILES_DIRS = [os.path.join(BASE_DIR, "/static/")]
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, "./static/") 
     # STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")   
+    MEDIA_ROOT = BASE_DIR/'media'
+
+
 
 # STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")
 
@@ -160,6 +171,7 @@ LOGIN_REDIRECT_URL = '/'
 
 # Para el logout
 LOGOUT_REDIRECT_URL = '/'
+# LOGOUT_REDIRECT_URL = '/inicia-sesion/'  # mejor esto
 
 
 # # social auth configs for github

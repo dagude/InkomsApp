@@ -10,21 +10,9 @@ https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/
 import os
 from django.core.wsgi import get_wsgi_application
 
-# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'InkomsApp.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'InkomsApp.settings')
 
-settings_module = 'InkomsApp.production' if 'WEBSITE_HOSTNAME' in os.environ else 'InkomsApp.settings'
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
+# settings_module = 'InkomsApp.production' if 'WEBSITE_HOSTNAME' in os.environ else 'InkomsApp.settings'
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 application = get_wsgi_application()
-
-# whitenoise - se incluye
-
-# from whitenoise import WhiteNoise
-# from InkomsApp import perfiles
-
-# # from InkomsApp import wsgi
-
-# application = perfiles()
-
-# application = WhiteNoise(application, root="/path/to/static/files")
-# application.add_files("/path/to/more/static/files", prefix="more-files/")
