@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 load_dotenv()  # loads the configs from .env
@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
     'www.inkoms.com',
     'http://www.inkoms.com',
     'inkoms.com',
+    'http://inkoms.com',
     '.localhost',
     '127.0.0.1',
     '[::1]'
@@ -52,8 +53,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls.apps.PollsConfig',
+    'django.contrib.humanize',
+
     'perfiles.apps.PerfilesConfig',
+
+    # 'post.apps.PostConfig',
+    # 'business.apps.BusinessConfig',
+    # 'useraccount.apps.UseraccountConfig',
+    # 'profilepage.apps.ProfilepageConfig',
+
 ]
 
 
@@ -65,10 +73,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # # Added for caching:
-    # 'django.middleware.cache.UpdateCacheMiddleware',
-    # 'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.cache.FetchFromCacheMiddleware',
+    # Added for caching:
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 
@@ -146,12 +154,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = ''
 
-
 if DEBUG:
-    # STATICFILES_DIRS = [os.path.join(BASE_DIR, "/static/")]
+    # STATICFILES_DIRS = [os.path.join(BASE_DIR, "./static/")]
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, "./static/") 
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
     # STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")   
     MEDIA_ROOT = BASE_DIR/'media'
 
@@ -166,12 +174,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Para que la vista nos redirija al index después de validado del formulario 
-LOGIN_URL = '/inicia-sesion/'
+LOGIN_URL = '/iniciar-sesion/'
 LOGIN_REDIRECT_URL = '/'
 
 # Para el logout
-LOGOUT_REDIRECT_URL = '/'
-# LOGOUT_REDIRECT_URL = '/inicia-sesion/'  # mejor esto
+# LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/iniciar-sesion/'  # mejor esto
 
 
 # # social auth configs for github

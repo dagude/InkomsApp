@@ -1,5 +1,6 @@
 Django
 django-crispy-forms
+django-bootstrap5
 whitenoise
 python-dotenv
 asgiref
@@ -7,4 +8,4 @@ django-crispy-forms
 python-dotenv
 sqlparse
 tzdata
-
+Pillow

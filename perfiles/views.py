@@ -1,17 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
-
-from django.views.generic import CreateView, TemplateView
+from django.http import Http404
+from django.views.generic import CreateView, TemplateView, DetailView
+from django.contrib.auth.views import LoginView, LogoutView 
 
 from .models import Perfil
 
 from .forms import SignUpForm
-from django.contrib.auth.views import LoginView, LogoutView 
-
-
 
 # Create your views here.
-
 class SignUpView(CreateView):
     model = Perfil
     form_class = SignUpForm
@@ -30,13 +27,25 @@ class SignUpView(CreateView):
         
         return redirect('/')
 
-class BienvenidaView(TemplateView):
-   template_name = 'perfiles/bienvenida.html'
+class HomeView(TemplateView):
+   template_name = 'perfiles/home.html'
 
 
 class SignInView(LoginView):
-    template_name = 'perfiles/iniciar_sesion.html'
+    template_name = 'perfiles/sign_in.html'
 
 
 class SignOutView(LogoutView):
     pass
+
+class AboutView(DetailView):
+    template_name = 'perfiles/about.html'
+
+def UserDetailView(request, username):
+    try:
+        User = Perfil.objects.get(id=username)
+    except Perfil.DoesNotExist:
+        raise Http404('perfil not found')
+    return render(request, 'perfiles/user_detail.html', {
+            'usuario': username,
+            })

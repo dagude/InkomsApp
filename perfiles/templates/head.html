@@ -1,0 +1,30 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Plataforma abierta de inversiones">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="{% static 'css/styles.css' %}"
+    > <!-- Estilos enfocados en mobile -->
+    <link 
+        rel="stylesheet"
+        href="{% static "css/tablet.css" %}"
+        media="screen and (min-width:600px)"
+    > <!-- Estilos enfocados en tablet -->
+    <link
+        rel="stylesheet"
+        href="{% static "css/desktop.css" %}"
+        media="screen and (min-width:800px)"    
+    > <!-- Estilos enfocados en desktop -->
+
+    <title>Inkoms - Inversiones al alcance de todos</title> 
+</head>

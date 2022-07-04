@@ -2,161 +2,107 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <html lang="es">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Plataforma abierta de inversiones">
-    <meta name="robots" content="index,follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <html lang="es">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Plataforma abierta de inversiones">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <link
-        rel="stylesheet"
-        href="{% static 'css/styles.css' %}"
-    > <!-- Estilos enfocados en mobile -->
-    <link 
-        rel="stylesheet"
-        href="{% static "css/tablet.css" %}"
-        media="screen and (min-width:600px)"
-    > <!-- Estilos enfocados en tablet -->
-    <link
-        rel="stylesheet"
-        href="{% static "css/desktop.css" %}"
-        media="screen and (min-width:800px)"    
-    > <!-- Estilos enfocados en desktop -->
-    
-    <title>
-        {% block title %}
+        <link
+            rel="stylesheet"
+            href="{% static 'css/styles.css' %}"
+        > <!-- Estilos enfocados en mobile -->
+        <link 
+            rel="stylesheet"
+            href="{% static "css/tablet.css" %}"
+            media="screen and (min-width:600px)"
+        > <!-- Estilos enfocados en tablet -->
+        <link
+            rel="stylesheet"
+            href="{% static "css/desktop.css" %}"
+            media="screen and (min-width:800px)"    
+        > <!-- Estilos enfocados en desktop -->
+        
+        <title>
+            {% block title %}
+                
+            {% endblock %}
+        </title>
+
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="header-nav">
+                <input type="checkbox" name="" id="nav__checkbox" class="nav__checkbox"/>
+                <label for="nav__checkbox" class="nav__toggle">
+                
+                    <svg class="menu" viewBox="0 0 448 512" width="100" title="bars">
+                        <path
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+                    </svg>
             
-        {% endblock %}
-    </title>
+                
+                    <svg class="close" viewBox="0 0 384 512" width="100" title="times">
+                        <path
+                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+                    </svg>
+                </label>
+            
+                <ul class="nav__menu">
+                    <li class="menu__logo">
+                        <a href="/" class="index">
+                            <img
+                            src="{% static '/images/logo_inkoms.png' %}"
+                            alt="Inkoms"
+                            class="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Quiénes Somos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contáctanos</a>
+                    </li>
+                </ul>
+            </nav>
 
-    <style>
-    </style>
-</head>
-
-<body>
-    <header>
-        <nav class="header-nav">
-            <input type="checkbox" name="" id="nav__checkbox" class="nav__checkbox"/>
-            <label for="nav__checkbox" class="nav__toggle">
-              
-                <svg class="menu" viewBox="0 0 448 512" width="100" title="bars">
-                    <path
-                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
-                </svg>
-          
-              
-                <svg class="close" viewBox="0 0 384 512" width="100" title="times">
-                    <path
-                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
-                </svg>
-            </label>
-          
-            <ul class="nav__menu">
-                <li class="menu__logo">
-                    <a href="/" class="index">
-                        <img
-                        src="{% static '/images/logo_inkoms.png' %}"
-                        alt="Inkoms"
-                        class="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Quiénes Somos</a>
-                </li>
-                <li>
-                    <a href="#">Contáctanos</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="header--title-container">
-            <h1>¡Bienvenidos!</h1>
-            <p>Trabajamos para ofrecerte la mejor experiencia</p>
-        </div>
-    </header>
-
-    <main>
-        <section id="user">      
-            <div class="login">
-                <div class="form-container">
-                    <a href="/" class="index">
-                        <img
-                        src="{% static '/images/logo_inkoms.png' %}"
-                        alt="Inkoms"
-                        class="logo">
-                    </a>
-
-        
-                    {% block content %}
-        
-                    {% endblock content %}
-
-                </div>
+            <div class="header--title-container">
+                <h1>¡Bienvenidos!</h1>
+                <p>Trabajamos para ofrecerte la mejor experiencia</p>
             </div>
-        </section>
-    </main>
+        </header>
 
-    <footer>
-        <section class="footer-up">
-            <section class="footer-left">
-                <ul>
-                    <li><a href="#">Conócenos</a></li>
-                    <li><a href="#">Quiénes Sómos</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
-                    <li><a href="#">Confianza y seguridad</a></li>
-                </ul>
+        <main>
+            <section id="user">      
+                <div class="login">
+                    <div class="form-container">
+                        <a href="/" class="index">
+                            <img
+                            src="{% static '/images/logo_inkoms.png' %}"
+                            alt="Inkoms"
+                            class="logo">
+                        </a>
 
+            
+                        {% block content %}
+            
+                        {% endblock content %}
+
+                    </div>
+                </div>
             </section>
+        </main>
 
-            <section class="footer-right">
-                <a href="/" class="index">
-                    <img
-                    src="{% static '/images/logo_inkoms.png' %}"
-                    alt="Inkoms"
-                    class="">
-                </a>
-                <h2>Síguenos</h2>
-                <ul class="footer-right--redes">
-                    <li>
-                        <a href="https://www.linkedin.com/company/inkoms-investment/" class="redes">
-                            <span class="redes--linkedin"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/inkoms_oficial/" class="redes">
-                            <span class="redes--instagram"></span>
-                        </a>
-                    </li>
-                    <li><a href="https://www.facebook.com/inkoms" class="redes">
-                        <span class="redes--facebook"></span>
-                    </a></li>
-                </ul>
-            </section>
-        </section>
+        {% include 'footer.html' %}
 
-        <section class="footer-down">
-            <!-- Copyright -->
-            <ul class="copyright">
-                <li>
-                    <p>
-                        Copyright &copy;2021-2022.
-                        <a href="https://www.agvcapitalgroup.com/">
-                            AGV Capital Group.
-                        </a>
-                    </p>
-                    <p>
-                        Todos los derechos reservados.
-                    </p>
-                </li>
-            </ul>
-        </section>
-    </footer>
-
-</body>
+    </body>
 </html>

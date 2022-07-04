@@ -5,4 +5,5 @@ from .models import Perfil
 
 @admin.register(Perfil)
 class PerfilAdmin(admin.ModelAdmin):
-    list_display = ('usuario', 'bio', 'web')
+    # fields to see in the admin intarface
+    list_display = ('usuario', 'bio', 'web', 'sex')
