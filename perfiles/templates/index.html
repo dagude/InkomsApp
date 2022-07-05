@@ -61,8 +61,22 @@
         <main>
 
             <section class="main-welcome">
-                <h2>¡Bienvenidos!</h2>
-                <p>Trabajamos para ofrecerte la mejor experiencia</p>
+                <div class="welcome--title">
+                    <h2>Un único lugar para tus inversiones</h2>
+                    <p>Combinamos tecnologia y conocimiento de mercado para que puedas encontrar tu mejor opción.</p>    
+                </div>
+
+                <div class="welcome-detail--container">
+                    <div class="welcome-detail--card">
+                        <h2>Compara</h2>
+                    </div>
+                    <div class="welcome-detail--card">
+                        <h2>Invierte</h2>
+                    </div>
+                    <div class="welcome-detail--card">
+                        <h2>Disfruta</h2>
+                    </div>
+                </div>
             </section>
             
             <section class="main-product-detail">
@@ -97,10 +111,10 @@
                     <article class="product-detail--card">
                         <span class="dollar"></span>
                         <p class="product--card-title">
-                            Genera ingresos, Crecimiento y Preserva tu capital
+                            Inversión basada en objetivos
                         </p>
                         <p class="product--card-body">
-                            Productos diseñados para que puedas cumplir tus objetivos de inversión
+                            Encuentra productos que cumplan con tus objetivos de generar ingresos, crecimiento y preservación de capital
                         </p>
                     </article>
 
@@ -117,7 +131,7 @@
             </section>
 
             <section class="background-img-container">
-                <a href="{% url 'home' %}">
+                <a href="{% url 'welcome' %}">
                     <h2>Conócenos hoy.</h2>
                 </a>
             </section>
@@ -141,7 +155,7 @@
                             </h3>
                             <p class="plan-card--price"><span>$</span>0</p>
                             <p class="plan-card--saving">Compara y encuentra opciones para los objetivos de tu compañía</p>
-                            <a class="plan-card--ca" href="{% url 'home' %}">Ingresa <span></span></a>
+                            <a class="plan-card--ca" href="{% url 'welcome' %}">Ingresa <span></span></a>
                         </div>
                     </article>
 
@@ -153,7 +167,7 @@
                             </h3>
                             <p class="plan-card--price"><span>$</span>0</p>
                             <p class="plan-card--saving">Encuentra en un único punto todo tipo de alternativas de inversión</p>
-                            <a class="plan-card--ca" href="{% url 'home' %}">Ingresa <span></span></a>
+                            <a class="plan-card--ca" href="{% url 'welcome' %}">Ingresa <span></span></a>
                         </div>
                     </article>
 
@@ -165,7 +179,7 @@
                             </h3>
                             <p class="plan-card--price"><span>%</span>100</p>
                             <p class="plan-card--saving">Unidos podemos llevar las inversiones a otro nivel</p>
-                            <a class="plan-card--ca" href="{% url 'home' %}">Ingresa <span></span></a>
+                            <a class="plan-card--ca" href="{% url 'welcome' %}">Ingresa <span></span></a>
                         </div>
                     </article>
                 </section>
@@ -177,7 +191,7 @@
                 </div>
                 <div class="main-container--title">
                     <h2>Encuentra información del mercado</h2>
-                    <p>Traemos información actualizada de los produtos de la industria</p>
+                    <p>Te entregamos información actualizada de los produtos de la industria</p>
                 </div>
 
                 <section class="main-tables-container">

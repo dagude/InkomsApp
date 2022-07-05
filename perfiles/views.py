@@ -27,8 +27,8 @@ class SignUpView(CreateView):
         
         return redirect('/')
 
-class HomeView(TemplateView):
-   template_name = 'perfiles/home.html'
+class WelcomeView(TemplateView):
+   template_name = 'perfiles/welcome.html'
 
 
 class SignInView(LoginView):

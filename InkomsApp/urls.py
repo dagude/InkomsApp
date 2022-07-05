@@ -1,4 +1,4 @@
-from perfiles.views import SignUpView, HomeView, SignInView, SignOutView, AboutView, UserDetailView
+from perfiles.views import SignUpView, WelcomeView, SignInView, SignOutView, AboutView, UserDetailView
 
 
 """InkomsApp URL Configuration
@@ -29,7 +29,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # re_path(r'^admin/', admin.site.urls),
-    re_path(r'^$', HomeView.as_view(), name='home'),
+    re_path(r'^$', WelcomeView.as_view(), name='welcome'),
     re_path(r'^registrate/$', SignUpView.as_view(), name='sign_up'),
     re_path(r'^iniciar-sesion/$', SignInView.as_view(), name='sign_in'),
     re_path(r'^cerrar-sesion/$', SignOutView.as_view(), name='sign_out'),
