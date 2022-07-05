@@ -189,3 +189,5 @@ LOGOUT_REDIRECT_URL = '/iniciar-sesion/'  # mejor esto
 # # social auth configs for google
 # SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = str(os.getenv('GOOGLE_KEY'))
 # SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = str(os.getenv('GOOGLE_SECRET'))
+
+CSRF_TRUSTED_ORIGINS = ['https://inkoms.com']
