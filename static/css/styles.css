@@ -120,6 +120,7 @@ header {
 
 .menu__logo img {
     height: 100%;
+    padding: 5px;
 }
 
 #nav__checkbox:checked ~ ul.nav__menu li {
@@ -710,6 +711,7 @@ footer .footer-up {
 .footer-up .footer-right img {
     width: 100px;
     height: auto;
+    padding: 5px;
     align-self: center;
 }
 
