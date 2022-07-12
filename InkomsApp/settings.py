@@ -29,7 +29,8 @@ SECRET_KEY =   os.environ['SECRET_KEY']  # str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['DEBUG']
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')  # os.environ['ALLOWED_HOSTS']
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else os.environ.get('ALLOWED_HOSTS').split(' ')
+# os.environ['ALLOWED_HOSTS']
 
 # Application definition
 
