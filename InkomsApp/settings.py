@@ -150,8 +150,8 @@ if DEBUG:
 
 else:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    STATIC_ROOT = os.path.join(BASE_DIR, "static")
-    # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # with whitenoise
+    # STATIC_ROOT = os.path.join(BASE_DIR, "static")
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # with whitenoise
     # STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")   
     MEDIA_ROOT = BASE_DIR/'media'
 
