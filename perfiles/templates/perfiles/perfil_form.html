@@ -5,9 +5,6 @@
 {% block content %}
 
     <form action="" method="POST" class="form">
-
-        <h1>Esto es una prueba</h1>
-
         {% csrf_token %}
         <div class="form-group">
             {{ form.as_p }}
@@ -19,8 +16,8 @@
             value="Registrarse"
             class="primary-button login-button"
         >
-
-    </form>    
+    </form>
+    
 {% endblock content %}
 
 {% comment %}

@@ -8,7 +8,7 @@
 
 :root {
     /* Colores */
-    --dark-orange:#F7931A;
+    --dark-orange:#FF8000;
     --soft-orange: #FFE9D5;
     --dark-blue: #1A9AF7;
     --soft-blue: #E7F5FF;
@@ -202,22 +202,25 @@ main {
     background-color: var(--off-white);
 }
 
-.main-welcome {
+
+.main-description {
     width: 100%;
+    min-width: 320px;
     height: auto;
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 30px;
     text-align: center;
+    justify-content: center;
 }
 
-.welcome--title {
+.description--title {
     width: 90%;
     min-width: 288px;
     max-width: 900px;
     margin: 0 auto;
 }
 
-.welcome-detail--container {
+.description-detail--container {
     display: flex;
     width: 90%;
     min-width: 288px;
@@ -231,7 +234,7 @@ main {
     justify-content: space-evenly;
 }
 
-.welcome-detail--card {
+.description-detail--card {
     width: auto;
     /* min-width: 90px; */
     max-width: 300px;

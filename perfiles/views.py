@@ -38,7 +38,7 @@ class SignInView(LoginView):
 class SignOutView(LogoutView):
     pass
 
-class AboutView(DetailView):
+class AboutView(TemplateView):
     template_name = 'perfiles/about.html'
 
 def UserDetailView(request, username):
