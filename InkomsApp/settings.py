@@ -29,7 +29,7 @@ SECRET_KEY =   os.environ['SECRET_KEY']  # str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['DEBUG']
 
-ALLOWED_HOSTS = os.environ['WEBSITE_HOSTNAME'] if 'WEBSITE_HOSTNAME' in os.environ else os.environ.get('ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else os.environ.get('ALLOWED_HOSTS').split(' ')
 # os.environ['ALLOWED_HOSTS']
 
 # Application definition
@@ -148,7 +148,9 @@ if DEBUG:
     STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 else:
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     STATIC_ROOT = os.path.join(BASE_DIR, "static")
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")   
     MEDIA_ROOT = BASE_DIR/'media'
 
@@ -179,4 +181,6 @@ LOGOUT_REDIRECT_URL = '/iniciar-sesion/'  # mejor esto
 # SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = str(os.getenv('GOOGLE_KEY'))
 # SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = str(os.getenv('GOOGLE_SECRET'))
 
-CSRF_TRUSTED_ORIGINS = ['https://www.inkoms.com']
+
+# CSRF_TRUSTED_ORIGINS = ['https://www.inkoms.com']
+CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
