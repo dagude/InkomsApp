@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =   os.environ['SECRET_KEY']  # str(os.getenv('SECRET_KEY'))
+SECRET_KEY = os.environ['SECRET_KEY']  # str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['DEBUG']
@@ -183,5 +183,7 @@ LOGOUT_REDIRECT_URL = '/iniciar-sesion/'  # mejor esto
 # SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = str(os.getenv('GOOGLE_SECRET'))
 
 
-# CSRF_TRUSTED_ORIGINS = ['https://www.inkoms.com']
-CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
+# CSRF_TRUSTED_ORIGINS = os.environ['CSRF_TRUSTED_ORIGINS']
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS').split(' ')
+# print(CSRF_TRUSTED_ORIGINS)
+# CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
