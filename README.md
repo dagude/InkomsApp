@@ -8,6 +8,9 @@ Activar el entorno virtual
 instalar Django
 pip install django
 
+instalar dependencias
+pip install -r .\requirements.txt
+
 crear/Inicializar proyecto
 django-admin startproject project_name
 or py django-admin startproject usuarios

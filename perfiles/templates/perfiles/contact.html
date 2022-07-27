@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <html lang="es">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Plataforma abierta de inversiones">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="{% static 'css/styles.css' %}"
+        > <!-- Estilos enfocados en mobile -->
+        <link 
+            rel="stylesheet"
+            href="{% static "css/tablet.css" %}"
+            media="screen and (min-width:600px)"
+        > <!-- Estilos enfocados en tablet -->
+        <link
+            rel="stylesheet"
+            href="{% static "css/desktop.css" %}"
+            media="screen and (min-width:800px)"    
+        > <!-- Estilos enfocados en desktop -->
+        
+        <title>
+            {% block title %}
+                
+            {% endblock %}
+        </title>
+
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="header-nav">
+                <input type="checkbox" name="" id="nav__checkbox" class="nav__checkbox"/>
+                <label for="nav__checkbox" class="nav__toggle">
+                
+                    <svg class="menu" viewBox="0 0 448 512" width="100" title="bars">
+                        <path
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+                    </svg>
+            
+                
+                    <svg class="close" viewBox="0 0 384 512" width="100" title="times">
+                        <path
+                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+                    </svg>
+                </label>
+            
+                <ul class="nav__menu">
+                    <li class="menu__logo">
+                        <a href="/" class="index">
+                            <img
+                            src="{% static '/images/logo_inkoms.png' %}"
+                            alt="Inkoms"
+                            class="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Quiénes Somos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contáctanos</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header--title-container">
+                <h1>¡Bienvenidos!</h1>
+                <p>Trabajamos para ofrecerte la mejor experiencia</p>
+            </div>
+        </header>
+
+        <main>
+
+          <section class="main-team">
+            <h1>Equipo</h1>
+            <div class="main-team--people">
+              <img
+              src="{% static '/images/SV.jpg' %}"
+              alt="Sebastián Valderrama"
+              class="">
+              <h1>Sebastián Valderrama Tobón</h1>
+              <p>
+                Negociador internacional y Magister en finanzas, con más de 7 años de experiencia en inversiones y Private Equity, Gerente Finanzas Corporativas en Deloitte S. Latam y más de USD 900 mn en inversiones y vehículos estructuradas.
+              </p>
+            </div>
+
+            <div class="main-team--people">
+              <img
+              src="{% static '/images/DAV.jpg' %}"
+              alt="David Agudelo Velásquez"
+              class="">
+              <h1>David Agudelo Velásquez</h1>
+              <p>
+                Economista y Magister en finanzas con más de 10 años de experiencia en Inversiones, Portfolio Managmenet y Asset Allocation y más de USD 1.2 bn en activos bajo administración en vehículos de inversion.
+              </p>
+            </div>
+
+            <div class="main-team--people">
+              <img
+              src="{% static '/images/DGV.jpeg' %}"
+              alt="Daniel Gómez Velez"
+              class="">
+              <h1>Daniel Gómez Velez</h1>
+              <p>
+                Administrador de Empresas y Especialista en Finanzas con más de 5 años de experiencia en Risk Management y gestión de inversiones, Lider de operaciones en Startups y más de USD 360 mn en vehículos estructurados.
+              </p>
+            </div>
+          </section>
+
+          <section class="main-aliados">
+            <h1>Nuestros Aliados</h1>
+            <div class="main-aliados--container">
+              <img
+              src="{% static '/images/bedrock_azul.jpg' %}"
+              alt="BedRock"
+              class="">
+              <h1>BedRock</h1>
+              <p>
+                BEDROCK brinda asesoría jurídica integral y especializada, con una amplia gama de servicios legales en distintos sectores, tanto industriales como comerciales; especialmente en el mercado de valores y Fintech, para las cuales cuenta con un equipo de abogados especializados de la Universidad de Los Andes y la Universidad Javeriana, lo que permite ser un asesor de confianza y aliado estratégico para el desarrollo exitoso de nuestras actividades y negocios.
+              </p>
+            </div>
+          </section>
+        </main>
+
+        {% include 'footer.html' %}
+
+    </body>
+</html>

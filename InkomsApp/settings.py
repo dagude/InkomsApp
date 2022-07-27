@@ -100,9 +100,28 @@ WSGI_APPLICATION = 'InkomsApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'mssql',
+        'NAME': os.getenv("DB_NAME"),
+        'HOST': os.getenv("DB_SERVER"),
+        'PORT': '1433',
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'OPTIONS': {
+	            'driver': 'ODBC Driver 18 for SQL Server',
+	        },
     }
+
+    #To connect Azure SQL DB using MSI (Managed Service Identity)
+    # {
+    #     'ENGINE': 'mssql',
+    #     'HOST': 'xyz.database.windows.net',
+    #     'NAME': 'mydb', 
+    #     'PORT': '', 
+    #     'Trusted_Connection': 'no', 
+    #     'OPTIONS': { 
+    #         'driver': 'ODBC Driver 17 for SQL Server', 
+    #         'extra_params': "Authentication=ActiveDirectoryMsi;Encrypt=yes;TrustServerCertificate=no" }
+    # }
 }
 
 

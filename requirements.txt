@@ -9,3 +9,8 @@ python-dotenv
 sqlparse
 tzdata
 Pillow
+django-cors-headers
+djangorestframework
+mssql-django
+pyodbc
+python-dotenv
