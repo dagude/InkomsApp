@@ -1,7 +1,6 @@
 # InkomsApp
 WebApp de Inkoms
 
-
 Activar el entorno virtual
 .\venv\scripts\activate
 
@@ -30,3 +29,9 @@ py manage.py test app_name
 
 crear super usuario
 py manage.py createsuperuser
+
+db in ssh azure
+apt-get update
+apt-get install g++
+apt-get install unixodbc-dev
+pip install pyodbc
