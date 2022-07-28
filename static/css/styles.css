@@ -1104,3 +1104,22 @@ footer .footer-down {
 .main-aliados p {
     font-size: 1.2rem;
 }
+
+.people-redes--linkedin {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../icons/logo_linkedin_oficial.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: text-bottom;
+    margin: 2px;
+    transition: 0.2s;
+}
+
+.people-redes--linkedin:hover {
+    width: 42px;
+    height: 42px;
+}

@@ -107,7 +107,7 @@ DATABASES = {
         'USER': os.getenv("DB_USER"),
         'PASSWORD': os.getenv("DB_PASSWORD"),
         'OPTIONS': {
-	            'driver': 'ODBC Driver 17 for SQL Server',
+	            'driver': 'ODBC Driver 17 for SQL Server',  # con la 18 no funciona
 	        },
     }
 
