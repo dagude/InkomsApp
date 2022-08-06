@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'perfiles.apps.PerfilesConfig',
+    'industria.apps.IndustriaConfig',
+
 
     # 'post.apps.PostConfig',
     # 'business.apps.BusinessConfig',

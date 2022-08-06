@@ -36,7 +36,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Nunito Sans', 'Ubuntu', sans-serif;
 }
 
 header {
@@ -49,7 +49,7 @@ header {
     height: 334px;
     text-align: center;
     background: linear-gradient(
-        207.8deg, #201E1C 16.69%, var(--dark-orange) 100%
+        207.8deg, #201E1C 10.69%, var(--dark-orange) 100%
         );
 }
 
@@ -59,7 +59,6 @@ header {
     height: 60px;
     top: 0;
     background-color: var(--white);
-    /* border-bottom: 1px solid var(--grey); */
 }
 
 .nav__checkbox {
@@ -110,8 +109,20 @@ header {
 
 .nav__menu a {
     color: inherit;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     text-decoration: none;
+    transition: 0.2s;
+    margin: 2px;
+    padding: 2px;
+}
+
+.nav__menu a:hover {
+    background: -webkit-linear-gradient(0deg, var(--black), var(--dark-orange) 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .menu__logo {
@@ -192,6 +203,8 @@ header {
 .header--title-container .header--button:hover {
     width: 231px;
     height: 50px;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 
@@ -263,6 +276,10 @@ main {
     max-width: 400px;
 }
 
+.categories-detail--container a {
+    text-decoration: none;
+}
+
 .categories-detail--card {
     min-width: 96px;
     max-width: 300px;
@@ -272,6 +289,15 @@ main {
     background-color: var(--white);
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16)
+}
+
+.categories-detail--card:hover {
+    background: var(--dark-orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
 }
 
 .categories--card-title {
@@ -917,6 +943,24 @@ footer .footer-up {
     height: 25px;
 }
 
+.redes--tiktok {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url("../icons/logo_tik-tok.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: text-bottom;
+    transition: 0.2s;
+}
+
+.redes--tiktok:hover {
+    width: 25px;
+    height: 25px;
+}
+
 footer .footer-down {
     display: flex;
     width: 100%;
@@ -1075,6 +1119,7 @@ footer .footer-down {
     padding: 10px;
     padding-bottom: 20px;
     align-items: center;
+    
 }
 
 .main-team--people img {

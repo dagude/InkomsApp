@@ -31,9 +31,7 @@
         > <!-- Estilos enfocados en desktop -->
         
         <title>
-            {% block title %}
-                
-            {% endblock %}
+          Industria
         </title>
 
         <style>
@@ -77,62 +75,17 @@
             </nav>
 
             <div class="header--title-container">
-                <h1>¡Bienvenidos!</h1>
+                <h1>Productos</h1>
                 <p>Trabajamos para ofrecerte la mejor experiencia</p>
             </div>
+
         </header>
 
         <main>
+          <div>
+            
+          </div>
 
-          <section class="main-team">
-            <h1>Equipo</h1>
-            <div class="main-team--people">
-              <img
-              src="{% static '/images/SV.jpg' %}"
-              alt="Sebastián Valderrama"
-              class="">
-              <h1>Sebastián Valderrama Tobón</h1>
-              <p>
-                Negociador internacional y Magister en finanzas, con más de 7 años de experiencia en inversiones y Private Equity, Gerente Finanzas Corporativas en Deloitte S. Latam y más de USD 900 mn en inversiones y vehículos estructuradas.
-              </p>
-            </div>
-
-            <div class="main-team--people">
-              <img
-              src="{% static '/images/DAV.jpg' %}"
-              alt="David Agudelo Velásquez"
-              class="">
-              <h1>David Agudelo Velásquez</h1>
-              <p>
-                Economista y Magister en finanzas con más de 10 años de experiencia en Inversiones, Portfolio Managmenet y Asset Allocation y más de USD 1.2 bn en activos bajo administración en vehículos de inversion.
-              </p>
-            </div>
-
-            <div class="main-team--people">
-              <img
-              src="{% static '/images/DGV.jpeg' %}"
-              alt="Daniel Gómez Velez"
-              class="">
-              <h1>Daniel Gómez Velez</h1>
-              <p>
-                Administrador de Empresas y Especialista en Finanzas con más de 5 años de experiencia en Risk Management y gestión de inversiones, Lider de operaciones en Startups y más de USD 360 mn en vehículos estructurados.
-              </p>
-            </div>
-          </section>
-
-          <section class="main-aliados">
-            <h1>Nuestros Aliados</h1>
-            <div class="main-aliados--container">
-              <img
-              src="{% static '/images/bedrock_azul.jpg' %}"
-              alt="BedRock"
-              class="">
-              <h1>BedRock</h1>
-              <p>
-                BEDROCK brinda asesoría jurídica integral y especializada, con una amplia gama de servicios legales en distintos sectores, tanto industriales como comerciales; especialmente en el mercado de valores y Fintech, para las cuales cuenta con un equipo de abogados especializados de la Universidad de Los Andes y la Universidad Javeriana, lo que permite ser un asesor de confianza y aliado estratégico para el desarrollo exitoso de nuestras actividades y negocios.
-              </p>
-            </div>
-          </section>
         </main>
 
         {% include 'footer.html' %}

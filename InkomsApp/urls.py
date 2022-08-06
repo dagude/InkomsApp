@@ -1,4 +1,5 @@
 from perfiles.views import SignUpView, WelcomeView, SignInView, SignOutView, AboutView, UserDetailView
+from industria.views import IndustryView
 
 
 """InkomsApp URL Configuration
@@ -36,6 +37,7 @@ urlpatterns = [
     re_path(r'^about/$', AboutView.as_view(), name='about'),
     # re_path(r'^nueva-contraseña/$', NewPassView.as_view(), name='new_password'),
     path('perfiles/<int:username>/', UserDetailView, name='user_detail'),
+    re_path(r'^industry/$', IndustryView.as_view(), name='industry'),
 
 
 
