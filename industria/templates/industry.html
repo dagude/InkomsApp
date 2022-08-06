@@ -75,16 +75,169 @@
             </nav>
 
             <div class="header--title-container">
-                <h1>Productos</h1>
-                <p>Trabajamos para ofrecerte la mejor experiencia</p>
+                <h1>Categorías</h1>
+                {% comment %} <p>Trabajamos para ofrecerte la mejor experiencia</p> {% endcomment %}
             </div>
+
+            <section class="main-categories">
+              <div class="categories-detail--container">
+                  <a href="{% url 'industry' %}">
+                      <article class="categories-detail--card">
+                          <span class="categories-detail--fixed_income"></span>
+                          <p class="categories--card-title">
+                              Renta Fija
+                          </p>
+                          <p class="categories--card-body">
+                              Depósitos, Bonos, entre otros
+                          </p>
+                      </article>
+                  </a>
+  
+                  <a href="{% url 'industry' %}">
+                      <article class="categories-detail--card">
+                          <span class="categories-detail--equity"></span>
+                          <p class="categories--card-title">
+                              Renta Variable
+                          </p>
+                          <p class="categories--card-body">
+                              Acciones
+                          </p>
+                      </article>
+                  </a>
+  
+                  <a href="{% url 'industry' %}">
+                      <article class="categories-detail--card">
+                          <span class="categories-detail--real_estate"></span>
+                          <p class="categories--card-title">
+                              Inmobiliario
+                          </p>
+                          <p class="categories--card-body">
+                              Residencial, industrial, oficinas, comercial
+                          </p>
+                      </article>
+                  </a>
+  
+                  <a href="{% url 'industry' %}">
+                      <article class="categories-detail--card">
+                          <span class="categories-detail--private_debt"></span>
+                          <p class="categories--card-title">
+                              Deuda Privada
+                          </p>
+                          <p class="categories--card-body">
+                              Créditos directos
+                          </p>
+                      </article>
+                  </a>
+  
+                  <a href="{% url 'industry' %}">
+                      <article class="categories-detail--card">
+                          <span class="categories-detail--blockchain"></span>
+                          <p class="categories--card-title">
+                              Activos digitales
+                          </p>
+                          <p class="categories--card-body">
+                              Blockchain, Web3, criptoactivos
+                          </p>
+                      </article>
+                  </a>
+  
+                  <a href="{% url 'industry' %}">
+                      <article class="categories-detail--card">
+                          <span class="categories-detail--pension"></span>
+                          <p class="categories--card-title">
+                              Otros
+                          </p>
+                          <p class="categories--card-body">
+                              Fondos de Pensiones y Voluntarios
+                          </p>
+                      </article>
+                  </a>
+              </div>
+          </section>
 
         </header>
 
         <main>
-          <div>
 
-          </div>
+          <section>
+            
+          </section>
+
+          {% comment %} <section class="main-categories">
+            <div class="categories-detail--container">
+                <a href="{% url 'industry' %}">
+                    <article class="categories-detail--card">
+                        <span class="categories-detail--fixed_income"></span>
+                        <p class="categories--card-title">
+                            Renta Fija
+                        </p>
+                        <p class="categories--card-body">
+                            Depósitos, Bonos, entre otros
+                        </p>
+                    </article>
+                </a>
+
+                <a href="{% url 'industry' %}">
+                    <article class="categories-detail--card">
+                        <span class="categories-detail--equity"></span>
+                        <p class="categories--card-title">
+                            Renta Variable
+                        </p>
+                        <p class="categories--card-body">
+                            Acciones
+                        </p>
+                    </article>
+                </a>
+
+                <a href="{% url 'industry' %}">
+                    <article class="categories-detail--card">
+                        <span class="categories-detail--real_estate"></span>
+                        <p class="categories--card-title">
+                            Inmobiliario
+                        </p>
+                        <p class="categories--card-body">
+                            Residencial, industrial, oficinas, comercial
+                        </p>
+                    </article>
+                </a>
+
+                <a href="{% url 'industry' %}">
+                    <article class="categories-detail--card">
+                        <span class="categories-detail--private_debt"></span>
+                        <p class="categories--card-title">
+                            Deuda Privada
+                        </p>
+                        <p class="categories--card-body">
+                            Créditos directos
+                        </p>
+                    </article>
+                </a>
+
+                <a href="{% url 'industry' %}">
+                    <article class="categories-detail--card">
+                        <span class="categories-detail--blockchain"></span>
+                        <p class="categories--card-title">
+                            Activos digitales
+                        </p>
+                        <p class="categories--card-body">
+                            Blockchain, Web3, criptoactivos
+                        </p>
+                    </article>
+                </a>
+
+                <a href="{% url 'industry' %}">
+                    <article class="categories-detail--card">
+                        <span class="categories-detail--pension"></span>
+                        <p class="categories--card-title">
+                            Otros
+                        </p>
+                        <p class="categories--card-body">
+                            Fondos de Pensiones y Voluntarios
+                        </p>
+                    </article>
+                </a>
+            </div>
+        </section> {% endcomment %}
 
         </main>
 
